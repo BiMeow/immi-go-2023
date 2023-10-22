@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0000;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background: #b228e2;
+  border-radius: 20px;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: #040404;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.2;
+  //scroll-behavior: smooth !important;
+  // -ms-overflow-style: none;
+  // scrollbar-width: none;
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
+}
+
+p {
+  line-height: 1.5;
+}
+
+.bg-main {
+  background: rgb(255, 234, 249);
+  background-size: 100% 200% !important;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 234, 249, 1) 0%,
+    rgba(249, 131, 191, 1) 15%,
+    rgba(232, 84, 188, 1) 25%,
+    rgba(126, 35, 175, 1) 40%,
+    rgba(74, 13, 153, 1) 50%,
+    rgba(126, 35, 175, 1) 60%,
+    rgba(232, 84, 188, 1) 75%,
+    rgba(249, 131, 191, 1) 85%,
+    rgba(255, 234, 249, 1) 100%
+  );
+  background-position: top;
+  transition: 0.7s;
+}
+
+@layer components {
+  .cusContainer {
+    @apply mx-auto w-[84%] tl-l:w-full tl-l:px-[20px];
+  }
+
+  .secSpacing {
+    @apply mb-[60px] tl-p:mb-[30px];
+  }
+
+  .absFull {
+    @apply absolute left-0 top-0 h-full w-full object-cover;
+  }
+
+  .errors {
+    @apply text-[12px] text-[#ff0000];
+  }
+}
