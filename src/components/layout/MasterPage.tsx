@@ -63,7 +63,7 @@ function MasterPage({
           crossOrigin=""
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800;900&family=Bebas+Neue&display=swap"
           rel="stylesheet"
         />
       </Head>
@@ -75,7 +75,7 @@ function MasterPage({
           `}
         >
           <Header isHome={isHome} activeNav={activeNav} />
-          <div className={`pageContent h-[200vh]`}>{children}</div>
+          <div className={`pageContent`}>{children}</div>
           <Footer isHome={isHome} />
         </main>
       </Providers>

@@ -27,7 +27,7 @@ function Header({ ...props }) {
 
   return (
     <>
-      <div className={`Header sticky top-0`}>
+      <div className={`Header sticky top-0 z-[444]`}>
         <div className="cusContainer">
           <div className="flex items-center justify-between">
             <img src="/images/logo.png" alt="" className="max-w-[114px]" />
