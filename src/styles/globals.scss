@@ -43,17 +43,32 @@ p {
   background: linear-gradient(
     180deg,
     rgba(255, 234, 249, 1) 0%,
-    rgba(249, 131, 191, 1) 15%,
-    rgba(232, 84, 188, 1) 25%,
+    rgba(249, 131, 191, 1) 20%,
+    rgba(232, 84, 188, 1) 30%,
     rgba(126, 35, 175, 1) 40%,
     rgba(74, 13, 153, 1) 50%,
-    rgba(126, 35, 175, 1) 60%,
-    rgba(232, 84, 188, 1) 75%,
-    rgba(249, 131, 191, 1) 85%,
+    rgba(126, 35, 175, 1) 70%,
+    rgba(232, 84, 188, 1) 80%,
+    rgba(249, 131, 191, 1) 90%,
     rgba(255, 234, 249, 1) 100%
   );
   background-position: top;
   transition: 0.7s;
+}
+
+.bg-second {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 234, 249, 1) 0%,
+    rgba(249, 131, 191, 1) 30%,
+    rgba(232, 84, 188, 1) 50%,
+    rgba(126, 35, 175, 1) 90%,
+    rgba(74, 13, 153, 1) 100%
+  );
+}
+
+.shadow-inset {
+  box-shadow: inset 0 0 4px #0004;
 }
 
 @layer components {
@@ -71,5 +86,13 @@ p {
 
   .errors {
     @apply text-[12px] text-[#ff0000];
+  }
+
+  .subTitle {
+    @apply text-center uppercase tracking-[5px] text-[#D2D2D2];
+  }
+
+  .secTitle {
+    @apply text-center text-[40px] font-semibold text-white;
   }
 }
