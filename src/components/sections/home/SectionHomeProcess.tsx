@@ -1,7 +1,6 @@
-import React from "react";
-import { useEffect, useState, useContext, useRef, memo, useMemo } from "react";
-import { useRouter } from "next/router";
 import MainButton from "@/components/elements/MainButton";
+import { useRouter } from "next/router";
+import { memo } from "react";
 
 let listProcess = [
   {
@@ -44,7 +43,7 @@ function SectionHomeProcess({ ...props }) {
               >
                 <div
                   className={`
-                  image bg-main relative order-1 w-[39%] rounded-[10px] p-[2px] shadow-[0px_0px_40px_#7E23AF99]
+                  image bg-main relative w-[39%] rounded-[10px] p-[2px] shadow-[0px_0px_40px_#7E23AF99]
                   ${i % 2 == 0 ? "order-1" : "order-3"}
                   `}
                 >
