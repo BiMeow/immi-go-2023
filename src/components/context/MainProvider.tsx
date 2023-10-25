@@ -17,7 +17,11 @@ interface Props {
 }
 
 const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
-  const { setIsLoading } = useStorage();
+  const { setIsLoading, setPopupService } = useStorage();
+
+  const closePopup = () => {
+    setPopupService(false);
+  };
 
   const initAnimation = () => {
     let listFadeIn = gsap.utils.toArray(".fadeIn");
@@ -44,7 +48,7 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
         .fromTo(
           l,
           { y: 150, autoAlpha: 0, opacity: 0 },
-          { y: 0, autoAlpha: 1, opacity: 1 }
+          { y: 0, autoAlpha: 1, opacity: 1 },
         );
     });
 
@@ -60,7 +64,7 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
         .fromTo(
           l,
           { y: -150, autoAlpha: 0, opacity: 1 },
-          { y: 0, autoAlpha: 1, opacity: 1 }
+          { y: 0, autoAlpha: 1, opacity: 1 },
         );
     });
 
@@ -76,7 +80,7 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
         .fromTo(
           l,
           { x: -150, autoAlpha: 0, opacity: 0 },
-          { x: 0, autoAlpha: 1, opacity: 1 }
+          { x: 0, autoAlpha: 1, opacity: 1 },
         );
     });
 
@@ -92,7 +96,7 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
         .fromTo(
           l,
           { x: 150, autoAlpha: 0, opacity: 0 },
-          { x: 0, autoAlpha: 1, opacity: 1 }
+          { x: 0, autoAlpha: 1, opacity: 1 },
         );
     });
 
@@ -107,7 +111,7 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
   }, []);
 
   return (
-    <MainContext.Provider value={{}}>
+    <MainContext.Provider value={{ closePopup }}>
       {children}
       <Loading />
     </MainContext.Provider>

@@ -6,7 +6,9 @@ function Footer({ ...props }) {
 
   return (
     <>
-      <div className={`Footer`}>Footer</div>
+      <div className={`Footer`}>
+        <div className="cusContainer">Footer</div>
+      </div>
     </>
   );
 }
