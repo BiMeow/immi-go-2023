@@ -1,4 +1,5 @@
 import Avatar from "@/components/elements/Avatar";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { memo } from "react";
 
@@ -35,10 +36,11 @@ function Header({ ...props }) {
             <div className="listMenu flex items-center space-x-[20px]">
               {listMenu.map((e: any, i: number) => (
                 <div
-                  className="itemMenu cursor-pointer duration-300 hover:text-purple"
+                  className="itemMenu relative cursor-pointer duration-300 hover:text-purple"
                   key={i}
                 >
                   <h4 className="font-semibold">{e.title}</h4>
+                  <Link href={e.href} className="absFull" />
                 </div>
               ))}
               <Avatar />

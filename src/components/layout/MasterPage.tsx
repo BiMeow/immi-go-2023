@@ -71,11 +71,13 @@ function MasterPage({
       <Providers>
         <main
           className={`
-          MasterPage min-h-screen flex flex-col justify-between pt-[85px]
+          MasterPage flex min-h-screen flex-col justify-between pt-[85px]
           `}
         >
-          <Header isHome={isHome} activeNav={activeNav} />
-          <div className={`pageContent`}>{children}</div>
+          <div>
+            <Header isHome={isHome} activeNav={activeNav} />
+            <div className={`pageContent`}>{children}</div>
+          </div>
           <Footer isHome={isHome} />
         </main>
       </Providers>
