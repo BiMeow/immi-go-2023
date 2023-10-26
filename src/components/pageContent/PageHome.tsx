@@ -7,26 +7,22 @@ import { useRouter } from "next/router";
 import { memo } from "react";
 
 function PageHome({ ...props }) {
-  const router = useRouter();
+	const router = useRouter();
 
-  return (
-    <>
-      <div className={`PageHome mainPage`}>
-        <img
-          src="/images/bg-home.jpg"
-          alt=""
-          className="absolute left-0 top-0 w-full"
-        />
-        <div className="relative z-10">
-          <SectionHomeBanner />
-          <SectionHomeProcess />
-          <SectionHomeReference />
-          <SectionHomeCommit />
-          <SectionHomePartner />
-        </div>
-      </div>
-    </>
-  );
+	return (
+		<>
+			<div className={`PageHome mainPage`}>
+				<img src="/images/bg-home.jpg" alt="" className="absolute left-0 top-0 w-full" />
+				<div className="relative z-10">
+					<SectionHomeBanner />
+					<SectionHomeProcess />
+					<SectionHomeReference />
+					<SectionHomeCommit />
+					<SectionHomePartner />
+				</div>
+			</div>
+		</>
+	);
 }
 
 export default memo(PageHome);
