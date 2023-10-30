@@ -5,7 +5,7 @@ const PageProcess = dynamic(() => import("@/components/pageContent/PageProcess")
 
 export default function Home() {
 	return (
-		<MasterPage activeNav={3} pageName={"Trang chủ"}>
+		<MasterPage activeNav={3} pageName={"Tiến trình"}>
 			<PageProcess />
 		</MasterPage>
 	);

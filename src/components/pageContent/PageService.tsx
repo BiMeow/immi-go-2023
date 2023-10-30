@@ -1,7 +1,6 @@
 import { useStorage } from "@/components/context/StorageProvider";
 import MainButton from "@/components/elements/MainButton";
 import PopupService from "@/components/elements/PopupService";
-import LayoutModal from "@/components/layout/LayoutModal";
 import { useRouter } from "next/router";
 import { memo } from "react";
 
