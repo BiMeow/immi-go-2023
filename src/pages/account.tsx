@@ -1,12 +1,12 @@
 import MasterPage from "@/components/layout/MasterPage";
 import dynamic from "next/dynamic";
 
-const PageService = dynamic(() => import("@/components/pageContent/PageService"));
+const PageAccount = dynamic(() => import("@/components/pageContent/PageAccount"));
 
 export default function Home() {
 	return (
-		<MasterPage activeNav={2} pageName={"Dịch vụ"}>
-			<PageService />
+		<MasterPage activeNav={1} pageName={"Dịch vụ"}>
+			<PageAccount />
 		</MasterPage>
 	);
 }
