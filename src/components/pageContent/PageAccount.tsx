@@ -1,12 +1,28 @@
 import Avatar from "@/components/elements/Avatar";
 import MainButton from "@/components/elements/MainButton";
+import SectionAccountCheckFile from "@/components/sections/account/SectionAccountCheckFile";
+import SectionAccountCheckInfo from "@/components/sections/account/SectionAccountCheckInfo";
 import { useRouter } from "next/router";
-import { memo, useState } from "react";
+import { memo, useMemo, useState } from "react";
 
 function PageAccount({ ...props }) {
 	const router = useRouter();
 
-	const [change, setChange] = useState(false);
+	const [isActive, setIsActive] = useState("");
+
+	const formContent = useMemo(() => {
+		switch (isActive) {
+			case "fill":
+				return <SectionAccountCheckInfo />;
+
+			case "file":
+				return <SectionAccountCheckFile />;
+
+			default:
+				return <></>;
+				break;
+		}
+	}, [isActive]);
 
 	return (
 		<>
@@ -129,20 +145,38 @@ function PageAccount({ ...props }) {
 
 										<div className="listBtnFill mx-[-8px] flex">
 											<div className="w-1/2 px-[8px]">
-												<div className="bg-main w-full rounded-[32px] p-[2px] shadow-[0px_0px_20px_#7E23AF77]">
-													<div className="rounded-[30px] bg-[#14171C] p-[16px] text-center text-[24px]">
+												<div
+													className="bg-main w-full cursor-pointer rounded-[32px] p-[2px] shadow-[0px_0px_20px_#7E23AF77]"
+													onClick={() => setIsActive("fill")}
+												>
+													<div
+														className={`
+														rounded-[30px]  p-[16px] text-center text-[24px]
+														${isActive == "fill" ? "bg-second" : "bg-[#14171C]"}
+														`}
+													>
 														Check 462 infomation filling
 													</div>
 												</div>
 											</div>
 											<div className="w-1/2 px-[8px]">
-												<div className="bg-main w-full rounded-[32px] p-[2px] shadow-[0px_0px_20px_#7E23AF77]">
-													<div className="rounded-[30px] bg-[#14171C] p-[16px] text-center text-[24px]">
+												<div
+													className="bg-main w-full cursor-pointer rounded-[32px] p-[2px] shadow-[0px_0px_20px_#7E23AF77]"
+													onClick={() => setIsActive("file")}
+												>
+													<div
+														className={`
+														rounded-[30px] bg-[#14171C] p-[16px] text-center text-[24px]
+														${isActive == "file" ? "bg-second" : "bg-[#14171C]"}
+														`}
+													>
 														Check your file attachment
 													</div>
 												</div>
 											</div>
 										</div>
+
+										{formContent}
 									</div>
 								</div>
 							</div>
