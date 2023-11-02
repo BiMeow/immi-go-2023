@@ -21,6 +21,10 @@ let listMenu = [
 		title: "Theo dõi tiến trình",
 		href: "/process",
 	},
+	{
+		title: "Bài viết",
+		href: "/blog",
+	},
 ];
 
 function Header({ activeNav, ...props }: any) {
