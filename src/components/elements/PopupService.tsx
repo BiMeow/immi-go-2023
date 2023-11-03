@@ -7,6 +7,7 @@ import type { CheckboxChangeEvent } from "antd/es/checkbox";
 import MainButton from "@/components/elements/MainButton";
 import Link from "next/link";
 import { useMain } from "@/components/context/MainProvider";
+import PopupCloseIcon from "@/components/elements/PopupCloseIcon";
 
 function PopupService({ ...props }) {
 	const router = useRouter();
@@ -25,9 +26,9 @@ function PopupService({ ...props }) {
 			<Modal
 				className="cusPopup popupService"
 				open={popupService}
-				onCancel={() => console.log(`BiMeow is me!`)}
+				onCancel={() => closePopup()}
 				title={false}
-				closeIcon={false}
+				closeIcon={<PopupCloseIcon />}
 				footer={false}
 				width={800}
 				centered

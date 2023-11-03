@@ -9,6 +9,9 @@ const StorageProvider = (props: any) => {
 	//popup
 	const [popupService, setPopupService] = useState(false);
 	const [popupLoginSuccess, setPopupLoginSuccess] = useState(false);
+	const [popupCancelService, setPopupCancelService] = useState(false);
+	const [popupDeposit, setPopupDeposit] = useState(false);
+	const [popupWithdraw, setPopupWithdraw] = useState(false);
 
 	return (
 		<StorageContext.Provider
@@ -21,6 +24,12 @@ const StorageProvider = (props: any) => {
 				setPopupService,
 				popupLoginSuccess,
 				setPopupLoginSuccess,
+				popupCancelService,
+				setPopupCancelService,
+				popupDeposit,
+				setPopupDeposit,
+				popupWithdraw,
+				setPopupWithdraw,
 			}}
 			{...props}
 		></StorageContext.Provider>

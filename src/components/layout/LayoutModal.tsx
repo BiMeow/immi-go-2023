@@ -18,12 +18,12 @@ function CusPopup({ children, ...props }: any) {
 							alt=""
 							className="absolute left-[30px] top-[30px] max-w-[45px]"
 						/>
-						<div
+						{/* <div
 							className="absolute right-[30px] top-[30px] cursor-pointer fill-white duration-700 hover:fill-purple"
 							onClick={closePopup}
 						>
 							<IconClose />
-						</div>
+						</div> */}
 						{children}
 					</div>
 				</div>

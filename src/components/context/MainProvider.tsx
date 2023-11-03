@@ -17,11 +17,25 @@ interface Props {
 }
 
 const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
-	const { setIsLoading, setPopupService, setPopupLoginSuccess } = useStorage();
+	const {
+		setIsLoading,
+		setPopupService,
+		setPopupLoginSuccess,
+		setPopupCancelService,
+		setPopupDeposit,
+		setPopupWithdraw,
+	} = useStorage();
 
 	const closePopup = () => {
 		setPopupService(false);
 		setPopupLoginSuccess(false);
+		setPopupCancelService(false);
+		setPopupDeposit(false);
+		setPopupWithdraw(false);
+	};
+
+	const formatNumber = (num: any) => {
+		return !num ? 0 : "" + num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
 	};
 
 	const initAnimation = () => {
@@ -86,7 +100,7 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
 	}, []);
 
 	return (
-		<MainContext.Provider value={{ closePopup }}>
+		<MainContext.Provider value={{ formatNumber, closePopup }}>
 			{children}
 			<Loading />
 		</MainContext.Provider>
