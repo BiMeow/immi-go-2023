@@ -17,18 +17,17 @@ function MainButton({
 		<>
 			<div
 				className={`
-        MainButton bg-main group relative w-fit cursor-pointer rounded-[30px] px-[64px] py-[16px] leading-[1] hover:bg-bottom
-        ${className}
-        ${small ? "px-[24px] py-[12px]" : ""}
-        ${medium ? "px-[32px]" : ""}
-
-        `}
+				MainButton bg-main group relative w-fit cursor-pointer rounded-[30px] px-[64px] py-[16px] leading-[1] hover:bg-bottom
+				${className}
+				${small ? "!px-[24px] !py-[12px]" : ""}
+				${medium ? "!px-[32px]" : ""}
+				`}
 			>
 				<div
 					className={`
-          relative z-10 whitespace-nowrap font-bold leading-[1] text-white duration-500 group-hover:text-[#4A0D99]
-          ${small ? "text-[14px]" : "text-[24px]"}
-          `}
+					relative z-10 whitespace-nowrap font-bold leading-[1] text-white duration-500 group-hover:text-[#4A0D99]
+					${small ? "text-[14px]" : "text-[24px]"}
+					`}
 				>
 					{children}
 				</div>

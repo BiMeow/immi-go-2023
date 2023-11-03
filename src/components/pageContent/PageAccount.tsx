@@ -1,5 +1,9 @@
+import { useStorage } from "@/components/context/StorageProvider";
 import Avatar from "@/components/elements/Avatar";
 import MainButton from "@/components/elements/MainButton";
+import PopupCancelService from "@/components/elements/PopupCancelService";
+import PopupDeposit from "@/components/elements/PopupDeposit";
+import PopupWithdraw from "@/components/elements/PopupWithdraw";
 import SectionAccountCheckFile from "@/components/sections/account/SectionAccountCheckFile";
 import SectionAccountCheckInfo from "@/components/sections/account/SectionAccountCheckInfo";
 import { useRouter } from "next/router";
@@ -7,6 +11,8 @@ import { memo, useMemo, useState } from "react";
 
 function PageAccount({ ...props }) {
 	const router = useRouter();
+
+	const { setPopupCancelService, setPopupDeposit, setPopupWithdraw } = useStorage();
 
 	const [isActive, setIsActive] = useState("");
 
@@ -63,8 +69,12 @@ function PageAccount({ ...props }) {
 										tiền
 									</p>
 									<div className="listBtn flex max-w-[280px] items-center justify-between">
-										<MainButton small>Nạp tiền</MainButton>
-										<MainButton small>Rút tiền tiền</MainButton>
+										<div onClick={() => setPopupDeposit(true)}>
+											<MainButton small>Nạp tiền</MainButton>
+										</div>
+										<div onClick={() => setPopupWithdraw(true)}>
+											<MainButton small>Rút tiền tiền</MainButton>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -134,7 +144,10 @@ function PageAccount({ ...props }) {
 												</div>
 
 												<div className="c2 flex flex-col items-center">
-													<button className="bg-main mb-[20px] !bg-clip-text text-[24px] text-transparent hover:bg-bottom">
+													<button
+														className="bg-main mb-[20px] !bg-clip-text text-[24px] text-transparent hover:bg-bottom"
+														onClick={() => setPopupCancelService(true)}
+													>
 														Dừng dịch vụ
 													</button>
 
@@ -184,6 +197,10 @@ function PageAccount({ ...props }) {
 					</div>
 				</div>
 			</div>
+
+			<PopupCancelService />
+			<PopupDeposit />
+			<PopupWithdraw />
 		</>
 	);
 }
