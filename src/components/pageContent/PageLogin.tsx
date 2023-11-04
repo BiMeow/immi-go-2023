@@ -21,20 +21,20 @@ function PageLogin({ ...props }) {
 	const LoginForm = () => {
 		return (
 			<>
-				<h2 className="bg-main mb-[30px] !bg-clip-text text-center text-[64px] font-bold uppercase leading-[1.3] text-transparent">
+				<h2 className="bg-main mb-[30px] !bg-clip-text text-center text-[64px] font-bold uppercase leading-[1.3] text-transparent tl-p:text-[50px] mb:text-[40px]">
 					Đăng nhập
 				</h2>
 
 				<div className="bg-main mb-[16px] w-full rounded-[50px] p-[2px] shadow-[0px_0px_20px_#7E23AF77]">
 					<input
-						className="w-full rounded-[48px] bg-[#292536] px-[30px] py-[20px] leading-[1.2]"
+						className="w-full rounded-[48px] bg-[#292536] px-[30px] py-[20px] leading-[1.2] mb:px-[20px] mb:py-[10px]"
 						placeholder="Immi email"
 					/>
 				</div>
 
 				<div className="bg-main mb-[16px] w-full rounded-[50px] p-[2px] shadow-[0px_0px_20px_#7E23AF77]">
 					<input
-						className="w-full rounded-[48px] bg-[#292536] px-[30px] py-[20px] leading-[1.2]"
+						className="w-full rounded-[48px] bg-[#292536] px-[30px] py-[20px] leading-[1.2] mb:px-[20px] mb:py-[10px]"
 						placeholder="Immi password"
 					/>
 				</div>
@@ -45,14 +45,14 @@ function PageLogin({ ...props }) {
 					</Checkbox>
 				</div>
 
-				<div className="mx-auto mb-[45px] w-fit">
+				<div className="mx-auto mb-[45px] w-fit tl-p:mb-[20px]">
 					<MainButton showDeco decoTop decoBottom>
 						Đăng nhập
 					</MainButton>
 				</div>
 
 				<p
-					className="mx-auto w-fit cursor-pointer text-[24px] text-[#A6A6A6] duration-500 hover:text-purple"
+					className="mx-auto w-fit cursor-pointer text-[24px] text-[#A6A6A6] duration-500 hover:text-purple tl-p:text-[20px] mb:text-[16px]"
 					onClick={() => setIsLogin(false)}
 				>
 					Đăng ký
@@ -64,46 +64,46 @@ function PageLogin({ ...props }) {
 	const RegisterForm = () => {
 		return (
 			<>
-				<h2 className="bg-main mb-[30px] !bg-clip-text text-center text-[64px] font-bold uppercase leading-[1.3] text-transparent">
+				<h2 className="bg-main mb-[30px] !bg-clip-text text-center text-[64px] font-bold uppercase leading-[1.3] text-transparent tl-p:text-[50px] mb:text-[40px]">
 					Đăng ký
 				</h2>
 
 				<div className="bg-main mb-[16px] w-full rounded-[50px] p-[2px] shadow-[0px_0px_20px_#7E23AF77]">
 					<input
-						className="w-full rounded-[48px] bg-[#292536] px-[30px] py-[20px] leading-[1.2]"
+						className="w-full rounded-[48px] bg-[#292536] px-[30px] py-[20px] leading-[1.2] mb:px-[20px] mb:py-[10px]"
 						placeholder="Immi email"
 					/>
 				</div>
 
 				<div className="bg-main mb-[16px] w-full rounded-[50px] p-[2px] shadow-[0px_0px_20px_#7E23AF77]">
 					<input
-						className="w-full rounded-[48px] bg-[#292536] px-[30px] py-[20px] leading-[1.2]"
+						className="w-full rounded-[48px] bg-[#292536] px-[30px] py-[20px] leading-[1.2] mb:px-[20px] mb:py-[10px]"
 						placeholder="Immi password"
 					/>
 				</div>
 
 				<div className="bg-main mb-[16px] w-full rounded-[50px] p-[2px] shadow-[0px_0px_20px_#7E23AF77]">
 					<input
-						className="w-full rounded-[48px] bg-[#292536] px-[30px] py-[20px] leading-[1.2]"
+						className="w-full rounded-[48px] bg-[#292536] px-[30px] py-[20px] leading-[1.2] mb:px-[20px] mb:py-[10px]"
 						placeholder="Phone number"
 					/>
 				</div>
 
 				<div className="bg-main mb-[45px] w-full rounded-[50px] p-[2px] shadow-[0px_0px_20px_#7E23AF77]">
 					<input
-						className="w-full rounded-[48px] bg-[#292536] px-[30px] py-[20px] leading-[1.2]"
+						className="w-full rounded-[48px] bg-[#292536] px-[30px] py-[20px] leading-[1.2] mb:px-[20px] mb:py-[10px]"
 						placeholder="Nickname"
 					/>
 				</div>
 
-				<div className="mx-auto mb-[45px] w-fit" onClick={() => setPopupLoginSuccess(true)}>
+				<div className="mx-auto mb-[45px] w-fit tl-p:mb-[20px]" onClick={() => setPopupLoginSuccess(true)}>
 					<MainButton showDeco decoTop decoBottom>
 						Đăng kỳ
 					</MainButton>
 				</div>
 
 				<p
-					className="mx-auto w-fit cursor-pointer text-[24px] text-[#A6A6A6] duration-500 hover:text-purple"
+					className="mx-auto w-fit cursor-pointer text-[24px] text-[#A6A6A6] duration-500 hover:text-purple tl-p:text-[20px] mb:text-[16px]"
 					onClick={() => setIsLogin(true)}
 				>
 					Đăng nhập
@@ -119,7 +119,11 @@ function PageLogin({ ...props }) {
 
 				<div className="cusContainer relative z-10 mx-auto max-w-[400px] py-[50px]">
 					<Link href={"/"}>
-						<img src="/images/logo-icon.png" alt="" className="mx-auto mb-[15px] max-w-[200px]" />
+						<img
+							src="/images/logo-icon.png"
+							alt=""
+							className="mx-auto mb-[15px] max-w-[200px] mb:max-w-[100px]"
+						/>
 					</Link>
 
 					{isLogin ? <LoginForm /> : <RegisterForm />}

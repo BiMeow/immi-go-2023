@@ -40,7 +40,7 @@ function PopupCancelService({ ...props }) {
 						<div className="areusure">
 							<p className="mb-[35px] text-center text-[24px]">Bạn có muốn hủy gói dịch vụ?</p>
 
-							<div className="flex justify-center space-x-[30px]">
+							<div className="flex justify-center space-x-[30px] mb:flex-col mb:space-x-0 mb:space-y-[40px]">
 								<div onClick={() => closePopup()}>
 									<MainButton className={"mx-auto"}>Tôi không muốn hủy</MainButton>
 								</div>

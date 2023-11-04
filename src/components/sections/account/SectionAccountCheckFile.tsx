@@ -14,8 +14,8 @@ function SectionAccountCheckFile({ ...props }) {
 				</h3>
 				<div className="mb-[30px] space-y-[10px]">
 					<p className="font-bold">Travel Document</p>
-					<div className="mx-[-8px] flex">
-						<div className="c1 w-[75%] space-y-[10px] px-[8px]">
+					<div className="mx-[-8px] flex mb:flex-col mb:space-y-[10px]">
+						<div className="c1 w-[75%] space-y-[10px] px-[8px] mb:w-full">
 							<div className="flex items-center">
 								<p className="w-[82px] whitespace-nowrap">Document type</p>
 								<div className="w-[calc(100%-82px)] pl-[16px]">
@@ -40,7 +40,7 @@ function SectionAccountCheckFile({ ...props }) {
 							</div>
 						</div>
 
-						<div className="c2 w-[25%] space-y-[10px] px-[8px]">
+						<div className="c2 w-[25%] space-y-[10px] px-[8px] mb:w-full">
 							<div className="mx-[-8px] flex">
 								<div className="w-1/2 px-[8px]">
 									<div className="bg-main w-full cursor-pointer rounded-[32px] p-[2px] shadow-[0px_0px_20px_#7E23AF77]">
@@ -65,16 +65,10 @@ function SectionAccountCheckFile({ ...props }) {
 
 				<div className="mb-[30px] space-y-[10px]">
 					<p className="font-bold">Travel Document</p>
-					<div className="mx-[-8px] flex">
-						<div className="c1 w-[75%] space-y-[10px] px-[8px]">
+					<div className="mx-[-8px] flex mb:flex-col mb:space-y-[10px]">
+						<div className="c1 w-[75%] space-y-[10px] px-[8px] mb:w-full">
 							<div className="flex items-center">
 								<p className="w-[82px] whitespace-nowrap">Document type</p>
-								<div className="w-[calc(100%-82px)] pl-[16px]">
-									<input type="text" className="cusInput" placeholder="BiMeow" />
-								</div>
-							</div>
-							<div className="flex items-center">
-								<p className="w-[82px] whitespace-nowrap">Description</p>
 								<div className="w-[calc(100%-82px)] pl-[16px]">
 									<Select
 										className="cusSelect"
@@ -89,9 +83,15 @@ function SectionAccountCheckFile({ ...props }) {
 									/>
 								</div>
 							</div>
+							<div className="flex items-center">
+								<p className="w-[82px] whitespace-nowrap">Description</p>
+								<div className="w-[calc(100%-82px)] pl-[16px]">
+									<input type="text" className="cusInput" placeholder="BiMeow" />
+								</div>
+							</div>
 						</div>
 
-						<div className="c2 w-[25%] space-y-[10px] px-[8px]">
+						<div className="c2 w-[25%] space-y-[10px] px-[8px] mb:w-full">
 							<div className="mx-[-8px] flex">
 								<div className="w-1/2 px-[8px]">
 									<div className="bg-main w-full cursor-pointer rounded-[32px] p-[2px] shadow-[0px_0px_20px_#7E23AF77]">

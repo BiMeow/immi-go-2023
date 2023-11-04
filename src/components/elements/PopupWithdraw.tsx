@@ -46,9 +46,9 @@ function PopupWithdraw({ ...props }) {
 		return (
 			<>
 				<div className="mx-auto mb-[35px] max-w-[600px]">
-					<p className="text-[24px]">Nhập số tiền bạn muốn rút</p>
+					<p className="text-[24px] mb:text-[20px]">Nhập số tiền bạn muốn rút</p>
 					<div className="rounded-[8px] bg-[#D9D9D9] px-[15px] py-[3px] pr-[4px]">
-						<div className="flex items-center justify-between text-[24px] leading-[1]">
+						<div className="flex items-center justify-between text-[24px] leading-[1] mb:text-[20px]">
 							<input
 								type="number"
 								placeholder="15000000"
@@ -76,36 +76,36 @@ function PopupWithdraw({ ...props }) {
 			<>
 				<div className="mb-[35px] space-y-[10px]">
 					<div>
-						<p className="mr-[20px] text-[24px]">Số tiền bạn muốn rút</p>
+						<p className="mr-[20px] text-[24px] mb:text-[20px]">Số tiền bạn muốn rút</p>
 						<div className="rounded-[8px] bg-[#686262] px-[15px] py-[3px] pr-[4px]">
-							<div className="flex items-center justify-between text-[24px] leading-[1]">
+							<div className="flex items-center justify-between text-[24px] leading-[1] mb:text-[20px]">
 								<p className="text-black">{formatNumber(much)}</p>
 								<p className="rounded-[6px] bg-[#C1C1C1] px-[5px] text-black">VNĐ</p>
 							</div>
 						</div>
 					</div>
 					<div>
-						<p className="mr-[20px] text-[24px]">Số dư trong tài khoản</p>
+						<p className="mr-[20px] text-[24px] mb:text-[20px]">Số dư trong tài khoản</p>
 						<div className="rounded-[8px] bg-[#686262] px-[15px] py-[3px] pr-[4px]">
-							<div className="flex items-center justify-between text-[24px] leading-[1]">
+							<div className="flex items-center justify-between text-[24px] leading-[1] mb:text-[20px]">
 								<p className="text-black">15.000.000</p>
 								<p className="rounded-[6px] bg-[#C1C1C1] px-[5px] text-black">VNĐ</p>
 							</div>
 						</div>
 					</div>
 					<div>
-						<p className="mr-[20px] text-[24px]">Số tiền còn lại</p>
+						<p className="mr-[20px] text-[24px] mb:text-[20px]">Số tiền còn lại</p>
 						<div className="rounded-[8px] bg-[#686262] px-[15px] py-[3px] pr-[4px]">
-							<div className="flex items-center justify-between text-[24px] leading-[1]">
+							<div className="flex items-center justify-between text-[24px] leading-[1] mb:text-[20px]">
 								<p className="text-black">15.000.000</p>
 								<p className="rounded-[6px] bg-[#C1C1C1] px-[5px] text-black">VNĐ</p>
 							</div>
 						</div>
 					</div>
 					<div>
-						<p className="text-[24px]">Tài khoản Paypal</p>
+						<p className="text-[24px] mb:text-[20px]">Tài khoản Paypal</p>
 						<div className="rounded-[8px] bg-[#D9D9D9] px-[15px] py-[3px] pr-[4px]">
-							<div className="flex items-center justify-between text-[24px] leading-[1]">
+							<div className="flex items-center justify-between text-[24px] leading-[1] mb:text-[20px]">
 								<input
 									type="email"
 									placeholder="BiMeow@gmail.com"
@@ -119,9 +119,9 @@ function PopupWithdraw({ ...props }) {
 						</div>
 					</div>
 					<div>
-						<p className="text-[24px]">Mật khẩu Immi</p>
+						<p className="text-[24px] mb:text-[20px]">Mật khẩu Immi</p>
 						<div className="rounded-[8px] bg-[#D9D9D9] px-[15px] py-[3px] pr-[4px]">
-							<div className="flex items-center justify-between text-[24px] leading-[1]">
+							<div className="flex items-center justify-between text-[24px] leading-[1] mb:text-[20px]">
 								<input
 									type="password"
 									placeholder="123456"
@@ -136,11 +136,11 @@ function PopupWithdraw({ ...props }) {
 					</div>
 					<div>
 						<Checkbox onChange={onChange}>
-							<p className="font-Barlow text-[20px] text-white">
+							<p className="font-Barlow text-[20px] text-white tl-p:text-[16px] mb:text-[12px]">
 								Tôi cam kết tài khoản Paypal mà tôi cung cấp phía trên là chính xác
 							</p>
 						</Checkbox>
-						<p className="text-[14px]">
+						<p className="text-[14px] mb:text-[12px]">
 							* Immi Go sẽ không chịu trách nhiệm nếu bạn điền sai thông tin Paypal
 						</p>
 					</div>
@@ -161,7 +161,7 @@ function PopupWithdraw({ ...props }) {
 	const Step3 = () => {
 		return (
 			<>
-				<div className="mb-[45px] space-y-[10px] text-[24px]">
+				<div className="mb-[45px] space-y-[10px] text-[24px] tl-p:text-[20px] mb:text-[16px]">
 					<p>
 						Chúng tôi đang kiểm tra thanh toán của bạn. Hãy kiểm tra tình trạng ở trang cá nhân của bạn
 						trong vòng 10 phút Nếu chưa được cập nhật thanh toán vui lòng liên hệ.
