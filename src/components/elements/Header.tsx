@@ -1,7 +1,7 @@
 import Avatar from "@/components/elements/Avatar";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { memo, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { useWindowSize } from "usehooks-ts";
 
 let listMenu = [
@@ -35,6 +35,10 @@ function Header({ activeNav, ...props }: any) {
 
 	const [showNav, setShowNav] = useState<any>(false);
 
+	useEffect(() => {
+		if (width > 767);
+	}, [width]);
+
 	return (
 		<>
 			<div className={`Header sticky top-0 z-[444] mb:pt-[20px]`}>
@@ -52,7 +56,7 @@ function Header({ activeNav, ...props }: any) {
 							className={`
 							listMenu flex items-center space-x-[20px]
 							mb:absolute mb:left-0 mb:top-0 mb:h-[100dvh] mb:w-screen mb:flex-col mb:justify-center mb:space-x-0 mb:space-y-[20px] mb:bg-black mb:backdrop-blur-[20px] mb:duration-700
-							${showNav ? "translate-x-0" : "-translate-x-full opacity-0"}
+							${showNav ? "mb:translate-x-0" : "mb:-translate-x-full mb:opacity-0"}
 							`}
 						>
 							{listMenu.map((e: any, i: number) => (
@@ -80,7 +84,7 @@ function Header({ activeNav, ...props }: any) {
 
 						<div
 							className={`
-							hamburger-lines absolute right-[20px] top-[35px] z-20 hidden mb:block
+							hamburger-lines absolute right-[20px] top-[35px] z-20 hidden mb:flex
 							${showNav ? "active" : ""}
 							`}
 							onClick={() => setShowNav(!showNav)}
@@ -96,10 +100,8 @@ function Header({ activeNav, ...props }: any) {
 			<style jsx global>{`
 				.Header {
 					.hamburger-lines {
-						display: block;
 						height: 26px;
 						width: 32px;
-						display: flex;
 						flex-direction: column;
 						justify-content: space-between;
 					}
