@@ -15,8 +15,8 @@ function PageBlog({ ...props }) {
 				<img src="/images/bg-service.jpg" alt="" className="absolute left-0 top-0 h-full w-full" />
 
 				<div className="cusContainer relative z-10">
-					<div className="heading mx-auto mb-[80px] max-w-[747px] text-center">
-						<h2 className="bg-main mb-[8px] !bg-clip-text text-[64px] font-bold uppercase leading-[1.3] text-transparent">
+					<div className="heading mx-auto mb-[80px] max-w-[747px] text-center tl-p:mb-[40px] mb:mb-[20px]">
+						<h2 className="bg-main !bg-clip-text text-[64px] font-bold uppercase leading-[1.3] text-transparent">
 							blogs
 						</h2>
 					</div>
@@ -25,9 +25,10 @@ function PageBlog({ ...props }) {
 						{[...Array(6)].map((e: any, i: number) => (
 							<div
 								className={`
-                                itemBlog group relative mb-[40px] w-1/3 px-[10px] ${
-									(i + 2) % 3 == 0 ? "mt-[-40px]" : ""
-								}
+                                itemBlog group relative mb-[40px] w-1/3 px-[10px] 
+								tl-p:w-1/2
+								mb:mb-[30px] mb:w-full
+								${(i + 2) % 3 == 0 ? "mt-[-40px] tl-p:mt-0" : ""}
                                 `}
 								key={i}
 							>

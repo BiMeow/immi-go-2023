@@ -42,9 +42,9 @@ function PopupDeposit({ ...props }) {
 		return (
 			<>
 				<div className="mx-auto mb-[35px] max-w-[600px] ">
-					<p className="text-[24px]">Nhập số tiền bạn muốn nạp</p>
+					<p className="text-[24px] mb:text-[20px]">Nhập số tiền bạn muốn nạp</p>
 					<div className="rounded-[8px] bg-[#D9D9D9] px-[15px] py-[3px] pr-[4px]">
-						<div className="flex items-center justify-between text-[24px] leading-[1]">
+						<div className="flex items-center justify-between text-[24px] leading-[1] mb:text-[20px]">
 							<input
 								type="number"
 								placeholder="15000000"
@@ -70,24 +70,27 @@ function PopupDeposit({ ...props }) {
 	const Step2 = () => {
 		return (
 			<>
-				<div className="listMethod mx-[-8px] mb-[45px] flex items-center justify-center">
+				<div className="listMethod mx-[-8px] mb-[45px] flex flex-wrap items-center justify-center mb:space-y-[30px]">
 					{listMethod.map((e: any, i: number) => (
-						<div className="itemMethod w-1/3 px-[8px]" key={i} onClick={() => setActiveMethod(e)}>
+						<div className="itemMethod w-1/3 px-[8px] mb:w-full" key={i} onClick={() => setActiveMethod(e)}>
 							<div className="bg-main w-full cursor-pointer rounded-[12px] p-[2px] shadow-[0px_0px_20px_#7E23AF77] hover:bg-bottom">
 								<div className="rounded-[10px] bg-[#14171C] px-[20px] py-[16px]">
-									<div className="image relative mb-[10px] h-[170px] w-full overflow-hidden rounded-[10px]">
+									<div className="image relative mb-[10px] h-[170px] w-full overflow-hidden rounded-[10px] mb:h-[100px]">
 										<img
 											src={e.image}
 											alt=""
 											className="absFull object-contain duration-700 group-hover:scale-110"
 										/>
 									</div>
-									<p className="mb-[45px] text-center text-[20px] font-light">Immidiately</p>
+									<p className="mb-[45px] text-center text-[20px] font-light mb:mb-[30px]">
+										Immidiately
+									</p>
 
-									<div className="bg-main mx-auto h-[55px]  w-[55px] cursor-pointer rounded-full p-[2px] shadow-[0px_0px_20px_#7E23AF77] hover:bg-bottom">
+									<div className="bg-main mx-auto h-[55px] w-[55px] cursor-pointer rounded-full p-[2px] shadow-[0px_0px_20px_#7E23AF77] hover:bg-bottom mb:h-[40px] mb:w-[40px]">
 										<div
 											className={`
                                             h-[50px] w-[50px] rounded-full duration-700
+											mb:h-[35px] mb:w-[35px]
                                             ${activeMethod.name == e.name ? "bg-purple" : "bg-[#14171C]"}
                                             `}
 										></div>
@@ -113,14 +116,14 @@ function PopupDeposit({ ...props }) {
 	const Step3 = () => {
 		return (
 			<>
-				<div className="mb-[35px] mt-[20px] flex items-center justify-between">
-					<div className="w-[70%] space-y-[10px] text-[24px] font-medium">
+				<div className="mb-[35px] mt-[20px] flex flex-wrap items-center justify-between mb:justify-center">
+					<div className="w-[70%] space-y-[10px] text-[24px] font-medium tl-p:text-[20px] mb:mb-[20px] mb:w-full mb:text-[16px]">
 						<p>Chủ tài khoản: Nguyen Cat Tuong</p>
 						<p>Nội dung chuyển khoản:”Code gen form VN Pay” </p>
 						<p>Amount: {formatNumber(parseInt(much))} VNĐ</p>
 					</div>
 
-					<img src={activeMethod.qr} alt="" className="w-[30%] max-w-[255px]" />
+					<img src={activeMethod.qr} alt="" className="mb-w-full w-[30%] max-w-[255px]" />
 				</div>
 
 				<div className="flex justify-center space-x-[30px]">
@@ -138,7 +141,7 @@ function PopupDeposit({ ...props }) {
 	const Step4 = () => {
 		return (
 			<>
-				<div className="mb-[35px] space-y-[10px] text-[24px]">
+				<div className="mb-[35px] space-y-[10px] text-[24px] tl-p:text-[20px] mb:text-[16px]">
 					<p>
 						Chúng tôi đang kiểm tra thanh toán của bạn. Hãy kiểm tra tình trạng ở trang cá nhân của bạn
 						trong vòng 10 phút Nếu chưa được cập nhật thanh toán vui lòng liên hệ.

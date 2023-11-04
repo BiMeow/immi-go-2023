@@ -15,12 +15,12 @@ function SectionAccountCheckInfo({ ...props }) {
 					</h3>
 					<div className="space-y-[10px]">
 						<p className="font-bold">Applicant</p>
-						<div className="flex items-center space-x-[16px]">
-							<p className="whitespace-nowrap">Passport number</p>
+						<div className="flex items-center space-x-[16px] mb:flex-col mb:items-start mb:space-x-0 mb:space-y-[5px]">
+							<p className="whitespace-nowrap mb:whitespace-normal">Passport number</p>
 							<input type="text" className="cusInput max-w-[300px]" placeholder="BiMeow" />
 						</div>
-						<div className="flex items-center space-x-[16px]">
-							<p className="whitespace-nowrap">Country of passport</p>
+						<div className="flex items-center space-x-[16px] mb:flex-col mb:items-start mb:space-x-0 mb:space-y-[5px]">
+							<p className="whitespace-nowrap mb:whitespace-normal">Country of passport</p>
 							<Select
 								className="cusSelect max-w-[300px]"
 								defaultValue="lucy"
@@ -33,8 +33,8 @@ function SectionAccountCheckInfo({ ...props }) {
 								suffixIcon={<CaretDownOutlined />}
 							/>
 						</div>
-						<div className="flex items-center space-x-[16px]">
-							<p className="whitespace-nowrap">Nationality of passport holder</p>
+						<div className="flex items-center space-x-[16px] mb:flex-col mb:items-start mb:space-x-0 mb:space-y-[5px]">
+							<p className="whitespace-nowrap mb:whitespace-normal">Nationality of passport holder</p>
 							<Select
 								className="cusSelect max-w-[300px]"
 								defaultValue="lucy"
@@ -56,11 +56,13 @@ function SectionAccountCheckInfo({ ...props }) {
 					</h3>
 					<div className="space-y-[10px]">
 						<p className="font-bold">Additional identity questions</p>
-						<div className="flex items-center space-x-[16px]">
-							<p className="whitespace-nowrap">Provide further details below, where available.</p>
+						<div className="flex items-center space-x-[16px] mb:flex-col mb:items-start mb:space-x-0 mb:space-y-[5px]">
+							<p className="whitespace-nowrap mb:whitespace-normal">
+								Provide further details below, where available.
+							</p>
 						</div>
-						<div className="flex items-center space-x-[16px]">
-							<p className="whitespace-nowrap">
+						<div className="flex items-center space-x-[16px] mb:flex-col mb:items-start mb:space-x-0 mb:space-y-[5px]">
+							<p className="whitespace-nowrap mb:whitespace-normal">
 								Has this applicant previously travelled to Australia or previously applied for a visa?
 							</p>
 							<Select

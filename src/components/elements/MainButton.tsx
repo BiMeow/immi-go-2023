@@ -17,7 +17,8 @@ function MainButton({
 		<>
 			<div
 				className={`
-				MainButton bg-main group relative w-fit cursor-pointer rounded-[30px] px-[64px] py-[16px] leading-[1] hover:bg-bottom mb:px-[40px]
+				MainButton bg-main group relative w-fit cursor-pointer rounded-[30px] px-[64px] py-[16px] leading-[1] hover:bg-bottom 
+				mb:px-[30px]
 				${className}
 				${small ? "!px-[24px] !py-[12px]" : ""}
 				${medium ? "!px-[32px]" : ""}
@@ -25,7 +26,8 @@ function MainButton({
 			>
 				<div
 					className={`
-					relative z-10 whitespace-nowrap font-bold leading-[1] text-white duration-500 group-hover:text-[#4A0D99]
+					relative z-10 whitespace-nowrap font-bold leading-[1] text-white duration-500 group-hover:text-[#4A0D99] 
+					mb:text-[14px]
 					${small ? "text-[14px]" : "text-[24px]"}
 					`}
 				>

@@ -9,12 +9,12 @@ function PageProcess({ ...props }) {
 
 	return (
 		<>
-			<div className={`PageProcess mainPage`}>
+			<div className={`PageProcess mainPage mb-[40px]`}>
 				<img src="/images/bg-service.jpg" alt="" className="absolute left-0 top-0 h-full w-full" />
 
 				<div className="cusContainer relative z-10">
-					<div className="heading mx-auto mb-[65px] max-w-[747px] text-center">
-						<h1 className="bg-main mb-[8px] !bg-clip-text text-[64px] font-bold uppercase leading-[1.3] text-transparent">
+					<div className="heading mx-auto mb-[65px] max-w-[747px] text-center mb:mb-[40px]">
+						<h1 className="bg-main mb-[8px] !bg-clip-text text-[64px] font-bold uppercase leading-[1.3] text-transparent tl-p:text-[55px] mb:text-[40px]">
 							Theo dõi tiến trình
 						</h1>
 						<p>Bạn có thể xem tình trang hiện tại của hồ sơ tại đây!</p>
@@ -23,14 +23,14 @@ function PageProcess({ ...props }) {
 					{change ? (
 						<>
 							<div className="status mx-auto mb-[30px] max-w-[600px]">
-								<div className="mb-[16px] flex flex-wrap items-center justify-between">
-									<div className="flex items-center space-x-[16px]">
-										<p className="text-[24px] font-bold">Portal Status:</p>
-										<p className="text-[20px]">Closing</p>
+								<div className="mb-[16px] flex items-center justify-between">
+									<div className="flex items-center space-x-[16px] mb:space-x-[8px]">
+										<p className="text-[24px] font-bold mb:text-[14px]">Portal Status:</p>
+										<p className="text-[20px] mb:text-[14px]">Closing</p>
 									</div>
-									<div className="flex items-center space-x-[16px]">
-										<p className="text-[24px] font-bold">Account status:</p>
-										<p className="text-[20px]"> Checking the portal</p>
+									<div className="flex items-center space-x-[16px] mb:space-x-[8px]">
+										<p className="text-[24px] font-bold mb:text-[14px]">Account status:</p>
+										<p className="text-[20px] mb:text-[14px]"> Checking the portal</p>
 									</div>
 								</div>
 
@@ -44,7 +44,7 @@ function PageProcess({ ...props }) {
 
 							<div className="log mx-auto max-w-[800px]">
 								<div className="bg-main w-full rounded-[10px] p-[2px] shadow-[0px_0px_20px_#7E23AF77]">
-									<div className="rounded-[8px] bg-[#292536] p-[35px] leading-[1.2]">
+									<div className="rounded-[8px] bg-[#292536] p-[35px] leading-[1.2] mb:p-[20px]">
 										<p>
 											[01/01/2024] 12:30 - Sub Account : Page 4 checking
 											<br />

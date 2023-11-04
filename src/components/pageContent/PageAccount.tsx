@@ -37,9 +37,9 @@ function PageAccount({ ...props }) {
 
 				<div className="cusContainer relative z-10">
 					<div className="mx-[-15px] flex flex-wrap items-stretch">
-						<div className="mb-[30px] w-[25%] px-[15px]">
-							<div className="bg-main w-full rounded-[10px] p-[2px] shadow-[0px_0px_20px_#7E23AF77]">
-								<div className="rounded-[8px] bg-[#292536] p-[30px] text-center">
+						<div className="mb-[30px] w-[25%] px-[15px] tl-p:w-full mb:mb-[16px]">
+							<div className="bg-main w-full rounded-[10px] p-[2px] shadow-[0px_0px_20px_#7E23AF77] tl-p:hidden">
+								<div className="rounded-[8px] bg-[#292536] p-[30px] text-center mb:p-[20px]">
 									<div className="mx-auto mb-[25px] w-fit">
 										<Avatar large />
 									</div>
@@ -48,11 +48,19 @@ function PageAccount({ ...props }) {
 									<p className="font-light">Lorem ipsum dolor</p>
 								</div>
 							</div>
+
+							<div className="hidden items-center space-x-[20px] tl-p:flex">
+								<Avatar />
+								<div>
+									<p className="mb-[5px] text-[24px] font-bold">BiMeow</p>
+									<p className="font-light">Lorem ipsum dolor</p>
+								</div>
+							</div>
 						</div>
 
-						<div className="mb-[30px] w-[75%] px-[15px]">
+						<div className="mb-[30px] w-[75%] px-[15px] tl-p:w-full mb:mb-[16px]">
 							<div className="bg-main h-full w-full rounded-[10px] p-[2px] shadow-[0px_0px_20px_#7E23AF77]">
-								<div className="flex h-full flex-col justify-between space-y-[8px] rounded-[8px] bg-[#292536] p-[30px]">
+								<div className="flex h-full flex-col justify-between space-y-[8px] rounded-[8px] bg-[#292536] p-[30px] mb:p-[20px]">
 									<h2 className="bg-main !bg-clip-text text-[32px] font-medium text-transparent">
 										E-Wallet
 									</h2>
@@ -80,9 +88,9 @@ function PageAccount({ ...props }) {
 							</div>
 						</div>
 
-						<div className="mb-[30px] w-[25%] px-[15px]">
+						<div className="mb-[30px] w-[25%] px-[15px] tl-p:w-full mb:mb-[16px]">
 							<div className="bg-main w-full rounded-[10px] p-[2px] shadow-[0px_0px_20px_#7E23AF77]">
-								<div className="rounded-[8px] bg-[#292536] p-[30px]">
+								<div className="rounded-[8px] bg-[#292536] p-[30px] mb:p-[20px]">
 									<h2 className="bg-main mb-[20px] !bg-clip-text text-[32px] font-medium text-transparent">
 										Lịch sử nạp tiền
 									</h2>
@@ -103,11 +111,11 @@ function PageAccount({ ...props }) {
 							</div>
 						</div>
 
-						<div className="mb-[30px] w-[75%] px-[15px]">
+						<div className="mb-[30px] w-[75%] px-[15px] tl-p:w-full mb:mb-[16px]">
 							<div className="bg-main h-full w-full rounded-[10px] p-[2px] shadow-[0px_0px_20px_#7E23AF77]">
-								<div className="flex h-full flex-col justify-between rounded-[8px] bg-[#292536] p-[30px]">
-									<div className="listInput mx-[-10px] mb-[30px] flex">
-										<div className="w-1/2 px-[10px]">
+								<div className="flex h-full flex-col justify-between rounded-[8px] bg-[#292536] p-[30px] mb:p-[20px]">
+									<div className="listInput mx-[-10px] mb-[30px] flex mb:flex-col mb:space-y-[20px]">
+										<div className="w-1/2 px-[10px] mb:w-full">
 											<div className="bg-main w-full rounded-[50px] p-[2px] shadow-[0px_0px_20px_#7E23AF77]">
 												<input
 													className="w-full rounded-[48px] bg-[#292536] px-[30px] py-[20px] leading-[1.2]"
@@ -116,7 +124,7 @@ function PageAccount({ ...props }) {
 											</div>
 										</div>
 
-										<div className="w-1/2 px-[10px]">
+										<div className="w-1/2 px-[10px] mb:w-full">
 											<div className="bg-main w-full rounded-[50px] p-[2px] shadow-[0px_0px_20px_#7E23AF77]">
 												<input
 													className="w-full rounded-[48px] bg-[#292536] px-[30px] py-[20px] leading-[1.2]"
@@ -143,7 +151,7 @@ function PageAccount({ ...props }) {
 													<p className="text-[#D2D2D2]">Subsrciption expiry: 20/09/2023</p>
 												</div>
 
-												<div className="c2 flex flex-col items-center">
+												<div className="c2 flex flex-col items-center mb:hidden">
 													<button
 														className="bg-main mb-[20px] !bg-clip-text text-[24px] text-transparent hover:bg-bottom"
 														onClick={() => setPopupCancelService(true)}
@@ -156,8 +164,18 @@ function PageAccount({ ...props }) {
 											</div>
 										</div>
 
-										<div className="listBtnFill mx-[-8px] flex">
-											<div className="w-1/2 px-[8px]">
+										<div className="mb-[30px] hidden items-center space-x-[16px] mb:flex">
+											<MainButton medium>Gia hạn</MainButton>
+											<button
+												className="bg-main !bg-clip-text text-[24px] text-transparent hover:bg-bottom"
+												onClick={() => setPopupCancelService(true)}
+											>
+												Dừng dịch vụ
+											</button>
+										</div>
+
+										<div className="listBtnFill mx-[-8px] flex mb:flex-col mb:space-y-[20px]">
+											<div className="w-1/2 px-[8px] mb:w-full">
 												<div
 													className="bg-main w-full cursor-pointer rounded-[32px] p-[2px] shadow-[0px_0px_20px_#7E23AF77]"
 													onClick={() => setIsActive("fill")}
@@ -172,7 +190,7 @@ function PageAccount({ ...props }) {
 													</div>
 												</div>
 											</div>
-											<div className="w-1/2 px-[8px]">
+											<div className="w-1/2 px-[8px] mb:w-full">
 												<div
 													className="bg-main w-full cursor-pointer rounded-[32px] p-[2px] shadow-[0px_0px_20px_#7E23AF77]"
 													onClick={() => setIsActive("file")}
