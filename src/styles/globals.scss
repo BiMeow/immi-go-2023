@@ -97,7 +97,7 @@ input[type="number"] {
 	}
 
 	.secSpacing {
-		@apply mb-[60px] tl-p:mb-[30px];
+		@apply mb-[60px] mb:mb-[50px];
 	}
 
 	.absFull {
@@ -113,7 +113,7 @@ input[type="number"] {
 	}
 
 	.secTitle {
-		@apply text-center text-[40px] font-semibold text-white;
+		@apply text-center text-[40px] font-semibold text-white mb:text-[32px];
 	}
 
 	.SectionAccountCheckInfo .cusInput,
