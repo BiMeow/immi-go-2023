@@ -66,12 +66,12 @@ function MasterPage({
 				<main
 					className={`
 					MasterPage relative flex min-h-screen flex-col justify-between 
-					${pageLogin ? "" : "pt-[85px]"}
+					${pageLogin ? "" : "pt-[85px] tl-p:pt-[40px] mb:pt-0"}
 					`}
 				>
 					<div>
 						{!pageLogin && <Header isHome={isHome} activeNav={activeNav} />}
-						<div className={`pageContent`}>{children}</div>
+						<div className={`pageContent mb:pt-[20px]`}>{children}</div>
 					</div>
 					{!pageLogin && <Footer isHome={isHome} />}
 				</main>

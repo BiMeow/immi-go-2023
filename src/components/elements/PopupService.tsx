@@ -39,28 +39,34 @@ function PopupService({ ...props }) {
 					</h3>
 					{!success ? (
 						<div className="confirm">
-							<div className="mb-[20px] flex items-center">
-								<p className="mr-[20px] w-[115px] text-[24px]">Số dư của bạn</p>
-								<div className="w-[calc(100%-135px)] rounded-[8px] bg-[#686262] px-[15px] py-[3px] pr-[4px]">
-									<div className="flex items-center justify-between text-[24px] leading-[1]">
+							<div className="mb-[20px] flex flex-wrap items-center">
+								<p className="mr-[20px] w-[115px] text-[24px] mb:w-full mb:text-[20px]">
+									Số dư của bạn
+								</p>
+								<div className="w-[calc(100%-135px)] rounded-[8px] bg-[#686262] px-[15px] py-[3px] pr-[4px] mb:w-full">
+									<div className="flex items-center justify-between text-[24px] leading-[1] mb:text-[20px]">
 										<p className="text-black">15.000.000</p>
 										<p className="rounded-[6px] bg-[#C1C1C1] px-[5px]">VNĐ</p>
 									</div>
 								</div>
 							</div>
-							<div className="mb-[20px] flex items-center">
-								<p className="mr-[20px] w-[115px] text-[24px]">Số dư của bạn</p>
-								<div className="w-[calc(100%-135px)] rounded-[8px] bg-[#686262] px-[15px] py-[3px] pr-[4px]">
-									<div className="flex items-center justify-between text-[24px] leading-[1]">
+							<div className="mb-[20px] flex flex-wrap items-center">
+								<p className="mr-[20px] w-[115px] text-[24px] mb:w-full mb:text-[20px]">
+									Số dư của bạn
+								</p>
+								<div className="w-[calc(100%-135px)] rounded-[8px] bg-[#686262] px-[15px] py-[3px] pr-[4px] mb:w-full">
+									<div className="flex items-center justify-between text-[24px] leading-[1] mb:text-[20px]">
 										<p className="text-black">15.000.000</p>
 										<p className="rounded-[6px] bg-[#C1C1C1] px-[5px]">VNĐ</p>
 									</div>
 								</div>
 							</div>
-							<div className="mb-[30px] flex items-center">
-								<p className="mr-[20px] w-[115px] text-[24px]">Số dư của bạn</p>
-								<div className="w-[calc(100%-135px)] rounded-[8px] bg-[#686262] px-[15px] py-[3px] pr-[4px]">
-									<div className="flex items-center justify-between text-[24px] leading-[1]">
+							<div className="mb-[30px] flex flex-wrap items-center">
+								<p className="mr-[20px] w-[115px] text-[24px] mb:w-full mb:text-[20px]">
+									Số dư của bạn
+								</p>
+								<div className="w-[calc(100%-135px)] rounded-[8px] bg-[#686262] px-[15px] py-[3px] pr-[4px] mb:w-full">
+									<div className="flex items-center justify-between text-[24px] leading-[1] mb:text-[20px]">
 										<p className="text-black">15.000.000</p>
 										<p className="rounded-[6px] bg-[#C1C1C1] px-[5px]">VNĐ</p>
 									</div>
@@ -69,7 +75,7 @@ function PopupService({ ...props }) {
 
 							<div className="mb-[20px]">
 								<Checkbox onChange={onChange}>
-									<p className="font-Barlow text-[20px] text-white">
+									<p className="font-Barlow text-[20px] text-white mb:text-[10px]">
 										Tôi đã đọc kỹ điều khoản dịch vụ và hoàn toàn đồng ý:{" "}
 										<Link
 											href={
@@ -90,7 +96,7 @@ function PopupService({ ...props }) {
 						</div>
 					) : (
 						<div className="success">
-							<p className="mb-[45px] text-center text-[24px]">
+							<p className="mb-[45px] text-center text-[24px] mb:text-[20px]">
 								Chúc mừng bạn đã thanh toán gói dịch vụ thành công
 							</p>
 							<div onClick={() => closePopup()}>

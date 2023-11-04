@@ -17,7 +17,7 @@ function MainButton({
 		<>
 			<div
 				className={`
-				MainButton bg-main group relative w-fit cursor-pointer rounded-[30px] px-[64px] py-[16px] leading-[1] hover:bg-bottom
+				MainButton bg-main group relative w-fit cursor-pointer rounded-[30px] px-[64px] py-[16px] leading-[1] hover:bg-bottom mb:px-[40px]
 				${className}
 				${small ? "!px-[24px] !py-[12px]" : ""}
 				${medium ? "!px-[32px]" : ""}

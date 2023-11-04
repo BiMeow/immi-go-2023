@@ -26,32 +26,50 @@ function SectionHomePartner({ ...props }) {
 				<div className="listPartner overflow-hidden">
 					<div className="list animationLeft flex items-center">
 						{listPartner.map((e: any, i: number) => (
-							<div className="itemPartner relative h-[150px] w-[300px] flex-none pr-[40px]" key={i}>
+							<div
+								className="itemPartner relative h-[150px] w-[300px] flex-none pr-[40px] mb:h-[75px] mb:w-[150px]"
+								key={i}
+							>
 								<img src={e.image} alt="" className="h-full w-full object-contain" />
 							</div>
 						))}
 						{listPartner.map((e: any, i: number) => (
-							<div className="itemPartner relative h-[150px] w-[300px] flex-none pr-[40px]" key={i}>
+							<div
+								className="itemPartner relative h-[150px] w-[300px] flex-none pr-[40px] mb:h-[75px] mb:w-[150px]"
+								key={i}
+							>
 								<img src={e.image} alt="" className="h-full w-full object-contain" />
 							</div>
 						))}
 						{listPartner.map((e: any, i: number) => (
-							<div className="itemPartner relative h-[150px] w-[300px] flex-none pr-[40px]" key={i}>
+							<div
+								className="itemPartner relative h-[150px] w-[300px] flex-none pr-[40px] mb:h-[75px] mb:w-[150px]"
+								key={i}
+							>
 								<img src={e.image} alt="" className="h-full w-full object-contain" />
 							</div>
 						))}
 						{listPartner.map((e: any, i: number) => (
-							<div className="itemPartner relative h-[150px] w-[300px] flex-none pr-[40px]" key={i}>
+							<div
+								className="itemPartner relative h-[150px] w-[300px] flex-none pr-[40px] mb:h-[75px] mb:w-[150px]"
+								key={i}
+							>
 								<img src={e.image} alt="" className="h-full w-full object-contain" />
 							</div>
 						))}
 						{listPartner.map((e: any, i: number) => (
-							<div className="itemPartner relative h-[150px] w-[300px] flex-none pr-[40px]" key={i}>
+							<div
+								className="itemPartner relative h-[150px] w-[300px] flex-none pr-[40px] mb:h-[75px] mb:w-[150px]"
+								key={i}
+							>
 								<img src={e.image} alt="" className="h-full w-full object-contain" />
 							</div>
 						))}
 						{listPartner.map((e: any, i: number) => (
-							<div className="itemPartner relative h-[150px] w-[300px] flex-none pr-[40px]" key={i}>
+							<div
+								className="itemPartner relative h-[150px] w-[300px] flex-none pr-[40px] mb:h-[75px] mb:w-[150px]"
+								key={i}
+							>
 								<img src={e.image} alt="" className="h-full w-full object-contain" />
 							</div>
 						))}
@@ -76,6 +94,12 @@ function SectionHomePartner({ ...props }) {
 
 					.animationLeft:hover {
 						animation-play-state: paused;
+					}
+
+					@media screen and (max-width: 767px) {
+						.list {
+							width: calc(${listPartner.length} * 6 * 150px);
+						}
 					}
 				}
 
