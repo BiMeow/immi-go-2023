@@ -80,7 +80,7 @@ function Header({ activeNav, ...props }: any) {
 
 						<div
 							className={`
-							hamburger-lines absolute right-[20px] top-[20px] z-20 hidden mb:block
+							hamburger-lines absolute right-[20px] top-[35px] z-20 hidden mb:block
 							${showNav ? "active" : ""}
 							`}
 							onClick={() => setShowNav(!showNav)}

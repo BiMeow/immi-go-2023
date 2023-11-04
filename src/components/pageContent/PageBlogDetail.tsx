@@ -16,17 +16,17 @@ function PageBlogDetail({ ...props }) {
 
 				<div className="cusContainer relative z-10">
 					<div className="heading mx-auto mb-[40px] max-w-[915px] text-center">
-						<h2 className="mb-[20px] text-[48px] font-bold uppercase leading-[1.3]">
-							Keep up the spirit of the desire to <br /> travel around the world
+						<h2 className="mb-[20px] text-[48px] font-bold leading-[1.3] tl-p:text-[40px] mb:text-[32px] mb:font-medium">
+							Keep up the spirit of the desire to travel around the world
 						</h2>
-						<p className="text-[28px]">
+						<p className="text-[28px] tl-p:text-[20px] mb:text-[16px]">
 							We’re an online magazine dedicated to covering the best in international product design. We
 							started as a little blog back in 2002 covering student work and over time
 						</p>
 					</div>
 
-					<div className="mb-[20px] flex items-center justify-between">
-						<div className="author flex items-center space-x-[10px]">
+					<div className="mb-[20px] flex flex-wrap items-center justify-between">
+						<div className="author flex items-center space-x-[10px] mb:mb-[20px]">
 							<div className="relative h-[48px] w-[48px] overflow-hidden rounded-full">
 								<img src="/images/avatar.jpg" alt="" className="absFull" />
 							</div>
@@ -111,6 +111,7 @@ function PageBlogDetail({ ...props }) {
 							<div
 								className={`
                                 itemRelated group relative mb-[40px] w-1/3 px-[10px]
+								mb:w-full
                                 `}
 								key={i}
 							>
