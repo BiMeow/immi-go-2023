@@ -8,7 +8,7 @@ function PopupCloseIcon({ ...props }) {
 	return (
 		<>
 			<div className={`PopupCloseIcon`}>
-				<div className="absolute right-[30px] top-[30px] cursor-pointer fill-white duration-700 hover:fill-purple">
+				<div className="absolute right-[30px] top-[30px] cursor-pointer fill-white duration-700 hover:fill-purple mb:right-0 mb:top-0">
 					<IconClose />
 				</div>
 			</div>
