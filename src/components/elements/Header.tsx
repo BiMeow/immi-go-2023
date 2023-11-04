@@ -35,10 +35,6 @@ function Header({ activeNav, ...props }: any) {
 
 	const [showNav, setShowNav] = useState<any>(false);
 
-	useEffect(() => {
-		if (width > 767);
-	}, [width]);
-
 	return (
 		<>
 			<div className={`Header sticky top-0 z-[444] mb:pt-[20px]`}>
