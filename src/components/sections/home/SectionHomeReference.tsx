@@ -9,7 +9,7 @@ function SectionHomeReference({ ...props }) {
 			<div className={`SectionHomeReference secSpacing`}>
 				<div className="cusContainer">
 					<div className="mx-[-30px] flex flex-wrap">
-						<div className="c1 w-[40%] px-[30px] tl-p:order-2 tl-p:w-full">
+						<div className="c1 fadeLeft w-[40%] px-[30px] tl-p:order-2 tl-p:w-full">
 							<div className="listReference border-l border-t border-white">
 								<div className="itemReference grid grid-cols-2 text-center">
 									<p className="border-b border-r border-white p-[5px] font-bold tracking-[5px]">
@@ -27,7 +27,7 @@ function SectionHomeReference({ ...props }) {
 								))}
 							</div>
 						</div>
-						<div className="c2 relative w-[60%] px-[30px] tl-p:order-1 tl-p:mb-[40px] tl-p:w-full">
+						<div className="c2 fadeRight relative w-[60%] px-[30px] tl-p:order-1 tl-p:mb-[40px] tl-p:w-full">
 							<div className="absolute left-1/2 top-0 w-full -translate-x-[52%] -translate-y-[45%]">
 								<img src="/images/home-deco-1.png" alt="" className="" />
 							</div>

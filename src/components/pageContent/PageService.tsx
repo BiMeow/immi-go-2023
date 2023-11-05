@@ -1,8 +1,9 @@
 import { useStorage } from "@/components/context/StorageProvider";
 import MainButton from "@/components/elements/MainButton";
 import PopupService from "@/components/elements/PopupService";
+import gsap, { Bounce, Elastic } from "gsap";
 import { useRouter } from "next/router";
-import { memo } from "react";
+import { memo, useEffect } from "react";
 import { useWindowSize } from "usehooks-ts";
 
 function PageService({ ...props }) {
@@ -12,16 +13,52 @@ function PageService({ ...props }) {
 
 	const { setPopupService } = useStorage();
 
+	useEffect(() => {
+		setTimeout(() => {
+			gsap.timeline({
+				scrollTrigger: {
+					trigger: ".PageService",
+					start: "top 80%",
+				},
+			})
+				.fromTo(
+					".PageServiceTitle",
+					{ autoAlpha: 0, opacity: 0, scale: 0.3 },
+					{ autoAlpha: 1, opacity: 1, scale: 1, ease: Elastic.easeInOut },
+					0
+				)
+				.fromTo(".PageServiceText", { autoAlpha: 0, opacity: 0, y: -50 }, { autoAlpha: 1, opacity: 1, y: 0 }, 1)
+				.fromTo(
+					".listService .gold",
+					{ autoAlpha: 0, opacity: 0, scale: 0.3 },
+					{ autoAlpha: 1, opacity: 1, scale: 1, ease: Bounce.easeInOut },
+					2
+				)
+				.fromTo(
+					".listService .bronze",
+					{ autoAlpha: 0, opacity: 0, x: -50 },
+					{ autoAlpha: 1, opacity: 1, x: 0 },
+					1.3
+				)
+				.fromTo(
+					".listService .silver",
+					{ autoAlpha: 0, opacity: 0, x: 50 },
+					{ autoAlpha: 1, opacity: 1, x: 0 },
+					1.6
+				);
+		}, 1500);
+	}, []);
+
 	return (
 		<>
 			<div className={`PageService mainPage mb-[20px]`}>
 				<img src="/images/bg-service.jpg" alt="" className="absolute left-0 top-0 h-full w-full" />
 				<div className="cusContainer relative z-10">
 					<div className="heading mx-auto mb-[65px] max-w-[747px] text-center mb:mb-[40px]">
-						<h1 className="bg-main mb-[8px] !bg-clip-text text-[64px] font-bold uppercase leading-[1.3] text-transparent tl-p:text-[55px] mb:text-[40px]">
+						<h1 className="PageServiceTitle bg-main mb-[8px] !bg-clip-text text-[64px] font-bold uppercase leading-[1.3] text-transparent opacity-0 tl-p:text-[55px] mb:text-[40px]">
 							Gói dịch vụ
 						</h1>
-						<p className="text-[20px] tl-p:text-[18px] mb:text-[16px]">
+						<p className="PageServiceText text-[20px] opacity-0 tl-p:text-[18px] mb:text-[16px]">
 							Khám phá gói giá của Immi Go: từ ngắn hạn đến dài hạn, chúng tôi đề xuất giá ưu đãi càng
 							lâu, càng tiết kiệm.
 							<br />

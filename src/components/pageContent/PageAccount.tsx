@@ -37,7 +37,7 @@ function PageAccount({ ...props }) {
 
 				<div className="cusContainer relative z-10">
 					<div className="mx-[-15px] flex flex-wrap items-stretch">
-						<div className="mb-[30px] w-[25%] px-[15px] tl-p:w-full mb:mb-[16px]">
+						<div className="fadeRight mb-[30px] w-[25%] px-[15px] tl-p:w-full mb:mb-[16px]">
 							<div className="bg-main w-full rounded-[10px] p-[2px] shadow-[0px_0px_20px_#7E23AF77] tl-p:hidden">
 								<div className="rounded-[8px] bg-[#292536] p-[30px] text-center mb:p-[20px]">
 									<div className="mx-auto mb-[25px] w-fit">
@@ -58,7 +58,7 @@ function PageAccount({ ...props }) {
 							</div>
 						</div>
 
-						<div className="mb-[30px] w-[75%] px-[15px] tl-p:w-full mb:mb-[16px]">
+						<div className="fadeLeft mb-[30px] w-[75%] px-[15px] tl-p:w-full mb:mb-[16px]">
 							<div className="bg-main h-full w-full rounded-[10px] p-[2px] shadow-[0px_0px_20px_#7E23AF77]">
 								<div className="flex h-full flex-col justify-between space-y-[8px] rounded-[8px] bg-[#292536] p-[30px] mb:p-[20px]">
 									<h2 className="bg-main !bg-clip-text text-[32px] font-medium text-transparent">
@@ -88,7 +88,7 @@ function PageAccount({ ...props }) {
 							</div>
 						</div>
 
-						<div className="mb-[30px] w-[25%] px-[15px] tl-p:w-full mb:mb-[16px]">
+						<div className="fadeRight mb-[30px] w-[25%] px-[15px] tl-p:w-full mb:mb-[16px]">
 							<div className="bg-main w-full rounded-[10px] p-[2px] shadow-[0px_0px_20px_#7E23AF77]">
 								<div className="rounded-[8px] bg-[#292536] p-[30px] mb:p-[20px]">
 									<h2 className="bg-main mb-[20px] !bg-clip-text text-[32px] font-medium text-transparent">
@@ -111,7 +111,7 @@ function PageAccount({ ...props }) {
 							</div>
 						</div>
 
-						<div className="mb-[30px] w-[75%] px-[15px] tl-p:w-full mb:mb-[16px]">
+						<div className="fadeLeft mb-[30px] w-[75%] px-[15px] tl-p:w-full mb:mb-[16px]">
 							<div className="bg-main h-full w-full rounded-[10px] p-[2px] shadow-[0px_0px_20px_#7E23AF77]">
 								<div className="flex h-full flex-col justify-between rounded-[8px] bg-[#292536] p-[30px] mb:p-[20px]">
 									<div className="listInput mx-[-10px] mb-[30px] flex mb:flex-col mb:space-y-[20px]">

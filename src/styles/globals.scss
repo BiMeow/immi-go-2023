@@ -91,13 +91,22 @@ input[type="number"] {
 	-moz-appearance: textfield;
 }
 
+//init animation
+.fadeUp,
+.fadeDown,
+.fadeRight,
+.fadeLeft,
+.fadeIn {
+	opacity: 0;
+}
+
 @layer components {
 	.cusContainer {
 		@apply mx-auto w-[84%] tl-l:w-full tl-l:px-[20px];
 	}
 
 	.secSpacing {
-		@apply mb-[60px] mb:mb-[50px];
+		@apply mb-[80px] mb:mb-[50px];
 	}
 
 	.absFull {

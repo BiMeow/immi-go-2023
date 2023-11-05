@@ -56,7 +56,7 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
 					trigger: l,
 					start: "top 75%",
 				},
-			}).fromTo(l, { y: 150, autoAlpha: 0, opacity: 0 }, { y: 0, autoAlpha: 1, opacity: 1 });
+			}).fromTo(l, { y: 50, autoAlpha: 0, opacity: 0 }, { y: 0, autoAlpha: 1, opacity: 1 });
 		});
 
 		let listFadeDown = gsap.utils.toArray(".fadeDown");
@@ -66,7 +66,7 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
 					trigger: l,
 					start: "top 75%",
 				},
-			}).fromTo(l, { y: -150, autoAlpha: 0, opacity: 1 }, { y: 0, autoAlpha: 1, opacity: 1 });
+			}).fromTo(l, { y: -50, autoAlpha: 0, opacity: 1 }, { y: 0, autoAlpha: 1, opacity: 1 });
 		});
 
 		let listFadeRight = gsap.utils.toArray(".fadeRight");
@@ -76,7 +76,7 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
 					trigger: l,
 					start: "top 75%",
 				},
-			}).fromTo(l, { x: -150, autoAlpha: 0, opacity: 0 }, { x: 0, autoAlpha: 1, opacity: 1 });
+			}).fromTo(l, { x: -50, autoAlpha: 0, opacity: 0 }, { x: 0, autoAlpha: 1, opacity: 1 });
 		});
 
 		let listFadeLeft = gsap.utils.toArray(".fadeLeft");
@@ -86,7 +86,7 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
 					trigger: l,
 					start: "top 75%",
 				},
-			}).fromTo(l, { x: 150, autoAlpha: 0, opacity: 0 }, { x: 0, autoAlpha: 1, opacity: 1 });
+			}).fromTo(l, { x: 50, autoAlpha: 0, opacity: 0 }, { x: 0, autoAlpha: 1, opacity: 1 });
 		});
 
 		ScrollTrigger.refresh();
@@ -94,8 +94,8 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
 
 	useEffect(() => {
 		setTimeout(() => {
-			initAnimation();
 			setIsLoading(false);
+			initAnimation();
 		}, 1500);
 	}, []);
 
