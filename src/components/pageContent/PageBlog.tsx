@@ -1,13 +1,42 @@
 import { IconTag } from "@/components/elements/Icons";
 import MainButton from "@/components/elements/MainButton";
+import gsap, { Elastic } from "gsap";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { memo, useState } from "react";
+import { memo, useEffect, useState } from "react";
 
 function PageBlog({ ...props }) {
 	const router = useRouter();
 
 	const [change, setChange] = useState(false);
+
+	useEffect(() => {
+		setTimeout(() => {
+			gsap.timeline({
+				scrollTrigger: {
+					trigger: ".PageBlog",
+					start: "top 80%",
+				},
+			}).fromTo(
+				".PageBlogTitle",
+				{ autoAlpha: 0, opacity: 0, scale: 0.3 },
+				{ autoAlpha: 1, opacity: 1, scale: 1, ease: Elastic.easeInOut },
+				0
+			);
+
+			gsap.timeline({
+				scrollTrigger: {
+					trigger: ".PageBlog .listBlog",
+					start: "top 80%",
+				},
+			}).fromTo(
+				".PageBlog .listBlog .itemBlog",
+				{ autoAlpha: 0, opacity: 0, y: 50 },
+				{ autoAlpha: 1, opacity: 1, y: 0, stagger: 0.3 },
+				1
+			);
+		}, 1500);
+	}, []);
 
 	return (
 		<>
@@ -16,7 +45,7 @@ function PageBlog({ ...props }) {
 
 				<div className="cusContainer relative z-10">
 					<div className="heading mx-auto mb-[80px] max-w-[747px] text-center tl-p:mb-[40px] mb:mb-[20px]">
-						<h2 className="bg-main !bg-clip-text text-[64px] font-bold uppercase leading-[1.3] text-transparent">
+						<h2 className="PageBlogTitle bg-main !bg-clip-text text-[64px] font-bold uppercase leading-[1.3] text-transparent opacity-0">
 							blogs
 						</h2>
 					</div>

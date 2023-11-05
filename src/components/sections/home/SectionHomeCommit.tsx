@@ -1,5 +1,6 @@
 import { useEffect, useState, useContext, useRef, memo, useMemo } from "react";
 import { useRouter } from "next/router";
+import gsap from "gsap";
 
 const listCommit = [
 	{
@@ -25,9 +26,25 @@ const listCommit = [
 function SectionHomeCommit({ ...props }) {
 	const router = useRouter();
 
+	useEffect(() => {
+		setTimeout(() => {
+			gsap.timeline({
+				scrollTrigger: {
+					trigger: ".SectionHomeCommit .listCommit",
+					start: "top 80%",
+				},
+			}).fromTo(
+				".SectionHomeCommit .listCommit .itemCommit",
+				{ autoAlpha: 0, opacity: 0, y: 150 },
+				{ autoAlpha: 1, opacity: 1, y: 0, stagger: 0.5 },
+				0
+			);
+		}, 1500);
+	}, []);
+
 	return (
 		<>
-			<div className={`SectionHomeCommit secSpacing relative`}>
+			<div className={`SectionHomeCommit secSpacing fadeUp relative`}>
 				<div className="absolute left-1/2 top-0 w-full -translate-x-[50%] -translate-y-[45%]">
 					<img src="/images/home-deco-1.png" alt="" className="w-full" />
 				</div>

@@ -18,12 +18,12 @@ function SectionHomePartner({ ...props }) {
 
 	return (
 		<>
-			<div className={`SectionHomePartner secSpacing relative`}>
+			<div className={`SectionHomePartner secSpacing fadeUp relative`}>
 				<h2 className="bg-second mb-[25px] !bg-clip-text text-center text-[48px] font-semibold uppercase text-transparent">
 					Đối tác
 				</h2>
 
-				<div className="listPartner overflow-hidden">
+				<div className="listPartner fadeIn overflow-hidden">
 					<div className="list animationLeft flex items-center">
 						{listPartner.map((e: any, i: number) => (
 							<div
