@@ -69,7 +69,6 @@ function SectionHomeProcess({ ...props }) {
 					onEnter: () => onEnter(0),
 					onLeave: () => onEnter(-1),
 					onLeaveBack: () => onEnter(-1),
-					markers: true,
 				},
 			});
 
@@ -82,7 +81,6 @@ function SectionHomeProcess({ ...props }) {
 					onEnter: () => onEnter(1),
 					onLeave: () => onEnter(-1),
 					onLeaveBack: () => onEnter(-1),
-					markers: true,
 				},
 			});
 
@@ -95,7 +93,6 @@ function SectionHomeProcess({ ...props }) {
 					onEnter: () => onEnter(2),
 					onLeave: () => onEnter(-1),
 					onLeaveBack: () => onEnter(-1),
-					markers: true,
 				},
 			});
 
